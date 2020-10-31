@@ -25,7 +25,7 @@ public class RPCRestService {
 	}
 	
 	@GetMapping("/msg")
-	public String getMessage(@RequestParam String name ) {
+	public String getMessage(@RequestParam(value="name") String name ) {
 		log.info("inside get message method -"+name);
 		return "Hi!! How are You?"+name;
 	}
@@ -37,4 +37,5 @@ public class RPCRestService {
 		String str= "<h1>Date is :"+new Date().toString()+"</h1>";
 		return str;
 	}
+	
 }
