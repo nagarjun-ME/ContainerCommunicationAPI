@@ -17,4 +17,10 @@ public class RPCRestService {
 		log.info("inside get response method");
 		return "success";
 	}
+	
+	@GetMapping("/msg")
+	public String getMessage() {
+		log.info("inside get message method");
+		return "Hi!! How are You?";
+	}
 }
