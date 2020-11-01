@@ -22,7 +22,7 @@ public class Item {
 	 * @param itemPrice
 	 */
 	public Item(int itemID, String itemName, double itemPrice) {
-		super();
+	
 		this.itemID = itemID;
 		this.itemName = itemName;
 		this.itemPrice = itemPrice;
