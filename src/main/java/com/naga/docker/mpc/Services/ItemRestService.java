@@ -5,7 +5,9 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,9 +17,15 @@ import com.naga.docker.mpc.Model.Item;
 @RequestMapping("/item")
 public class ItemRestService {
 	
-	private Logger log=LoggerFactory.getLogger(getClass());
+	private Logger log=LoggerFactory.getLogger(this.getClass());
 	
-	@RequestMapping("/{itemId}")
+	@GetMapping("/")
+	public String getItem() {
+		log.info("Inside default methid");
+		return "item info";
+	}
+	
+	@PostMapping("/{itemId}")
 	public List<Item> getItem (@PathVariable("itemId") int Id) {
 		
 		log.info("Inside get Item");

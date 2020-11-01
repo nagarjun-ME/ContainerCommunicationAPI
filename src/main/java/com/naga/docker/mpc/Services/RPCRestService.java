@@ -1,4 +1,4 @@
-package com.naga.docker.mpc.ContainerCommunicationAPI;
+package com.naga.docker.mpc.Services;
 
 import java.util.Date;
 
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/test")
 public class RPCRestService {
 	
 	
-	private Logger log=LoggerFactory.getLogger(getClass());
+	private Logger log=LoggerFactory.getLogger(this.getClass());
 
 	@GetMapping("/")
 	public String getResponse() {
